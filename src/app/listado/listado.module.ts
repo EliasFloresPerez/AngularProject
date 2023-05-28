@@ -3,15 +3,22 @@ import { CommonModule } from '@angular/common';
 
 import { ListadoRoutingModule } from './listado-routing.module';
 import { TablaComponent } from './pages/tabla/tabla.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
 
 
 @NgModule({
   declarations: [
-    TablaComponent
+    TablaComponent,
+    
+    
   ],
   imports: [
     CommonModule,
-    ListadoRoutingModule
+    ListadoRoutingModule,
+    MatTableModule,
+    MatSlideToggleModule,
   ]
 })
 export class ListadoModule { }
