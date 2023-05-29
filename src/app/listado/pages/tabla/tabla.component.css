@@ -1,3 +1,26 @@
 table {
     width: 100%;
 }
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: inline-block;
+    width: 150px;
+    margin-right: 10px;
+}
+
+.form-group input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    width: 100%;
+}
+
+
+.container {
+    margin-top: 10px;
+}
+

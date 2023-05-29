@@ -31,5 +31,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class TablaComponent {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
-
+  elementos: string[] = ['Sucursal', 'C. de Gasto', 'Divison', 'Seccion', 'Usuario', 'Año'];
+  meses: string[] = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 }
+
+
