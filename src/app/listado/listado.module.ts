@@ -5,6 +5,8 @@ import { ListadoRoutingModule } from './listado-routing.module';
 import { TablaComponent } from './pages/tabla/tabla.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 
 
 
@@ -13,12 +15,15 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     TablaComponent,
     
     
+    
   ],
   imports: [
     CommonModule,
     ListadoRoutingModule,
     MatTableModule,
     MatSlideToggleModule,
+    MatIconModule,
+    MatButtonModule
   ]
 })
 export class ListadoModule { }

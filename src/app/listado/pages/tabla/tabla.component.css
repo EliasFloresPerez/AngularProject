@@ -24,3 +24,20 @@ table {
     margin-top: 10px;
 }
 
+th, td {
+      vertical-align: middle !important;
+      
+}
+
+th.month {
+    text-align: center;
+    font-size: 14px;
+  }
+
+th.wider-column {
+    width: 25%;
+}
+
+th.narrow-column {
+    width: 15%;
+}
