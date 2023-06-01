@@ -4,7 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path:'listado',
-    loadChildren:() => import('./listado/listado.module').then(m => m.ListadoModule)
+    loadChildren:() => import('./listado/listado.module').then(m => m.ListadoModule),
+  
   }
 ];
 

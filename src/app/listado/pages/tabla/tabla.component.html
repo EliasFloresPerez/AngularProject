@@ -1,8 +1,11 @@
+<app-navbar></app-navbar>
+
 <div class = "container">
+
 
     <!--Tabla de entrys-->
 
-    <div class="container">
+    <div class="container" id="Seccion">
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12" *ngFor="let elemento of elementos; let i = index">
           <div class="form-group d-flex">
@@ -25,37 +28,88 @@
             <th rowspan="2" class="align-middle wider-column">Vehiculo Gastos</th>
 
             <th colspan="3" class="month narrow-column">
+
               <div class="d-flex align-items-center justify-content-between">
-                <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+
+                <button mat-icon-button color="primary" (click)="moveLeft()">
                   <mat-icon>chevron_left</mat-icon>
                 </button>
+
                 <span class="text-center">Meses</span>
-                <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+
+                <button mat-icon-button color="primary" (click)="moveRight()">
                   <mat-icon>chevron_right</mat-icon>
                 </button>
+
               </div>
+
+
             </th>
             
 
 
             <th rowspan="2" class="align-middle narrow-column">Total</th>
+            <th rowspan="2" class="align-middle narrow-column">Opciones</th>
           </tr>
           <tr>
-            <th class="month ">Enero</th>
-            <th class="month ">Febrero</th>
-            <th class="month ">Marzo</th>
+            <th class="month ">{{ mes1  }}</th>
+            <th class="month ">{{ mes2 }}</th>
+            <th class="month ">{{ mes3 }}</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Contenido 1</td>
-            <td>Contenido 2</td>
-            <td>Contenido 3</td>
-            <td>Contenido 4</td>
-            <td>Contenido 5</td>
-            <td>Contenido 6</td>
-            <td>Contenido 7</td>
-          </tr>
+
+          <ng-container *ngFor="let element of dataSource">
+            <tr>
+             
+              <td rowspan="2">{{ element.Empleado }}</td>
+              <td rowspan="2">{{ element.CuentaI }}</td>
+              <td rowspan="2" >{{ element.GastoV }}</td>
+  
+  
+              
+              <td >{{ element.Meses[mes1] }}</td>
+              <td >{{ element.Meses[mes2] }}</td>
+              <td >{{ element.Meses[mes3] }}</td>
+              
+              
+              <td >{{ element.Total }}</td>
+
+              <td rowspan="2">
+                <div class="d-flex align-items-center">
+                  
+                  <button mat-icon-button>
+                    <mat-icon color="warn">visibility</mat-icon>
+                  </button>
+                
+                  <button mat-icon-button>
+                    <mat-icon color="warn">edit</mat-icon>
+                  </button>
+                
+                  <button mat-icon-button>
+                    <mat-icon style="color: rgb(236, 59, 47);">delete</mat-icon>
+                  </button>
+                </div>
+              </td>
+              
+            </tr>
+            
+
+            <tr>
+              <td >{{ element.Meses[mes1] }}</td>
+              <td >{{ element.Meses[mes2] }}</td>
+              <td >{{ element.Meses[mes3] }}</td>
+  
+              <td >{{ element.Total }}</td>
+              
+            </tr>
+
+
+
+          </ng-container>
+
+
+          
           <!-- Puedes agregar más filas aquí -->
         </tbody>
       </table>
